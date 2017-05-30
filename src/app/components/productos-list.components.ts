@@ -32,7 +32,8 @@ export class ProductosListComponent{
        result => {
          
         console.log(this.productos);
-        console.log(result.data[0].nombre);
+        /*console.log(result.data[0].nombre);*/
+        
 
         if(result.code !== 200){
    
@@ -42,7 +43,7 @@ export class ProductosListComponent{
         }else{
          this.productos = result.data; 
          console.log(this.productos);
-         console.log(result.data[0].nombre); 
+         /*console.log(result.data[0].nombre); */
         }
 
         

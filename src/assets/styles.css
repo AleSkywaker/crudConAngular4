@@ -72,6 +72,16 @@ img{
     max-width: 4%;
 }
 
+#form-producto{
+      border: 2px solid #c0c0c0;
+      padding-bottom: 2%;
+      border-radius: 4%;
+      background: #b3dbdd
+}
+#form-producto label{
+      margin-top: 3%;
+}
+
 
 
 

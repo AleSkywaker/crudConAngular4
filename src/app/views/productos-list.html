@@ -8,6 +8,7 @@ Cargando listado de productos
 <div *ngIf="productos"> 
 <ul>
     <li *ngFor="let producto of productos"><strong>{{producto.nombre}}</strong>
-    <p>{{producto.precio | currency:'EUR':true}}</p></li>
+    <p>{{producto.precio | currency:'EUR':true}}</p>
+    <p>{{producto.description}}</p></li>
 </ul>
 </div>
