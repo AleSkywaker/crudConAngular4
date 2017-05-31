@@ -1,14 +1,25 @@
 <h3>{{titulo}}</h3>
 <hr>
 
-
-<div *ngIf="!productos"> 
-Cargando listado de productos  
+<div *ngIf="!productos">
+    Cargando listado de productos
 </div>
-<div *ngIf="productos"> 
-<ul>
-    <li *ngFor="let producto of productos"><strong>{{producto.nombre}}</strong>
-    <p>{{producto.precio | currency:'EUR':true}}</p>
-    <p>{{producto.description}}</p></li>
-</ul>
+
+<div *ngIf="productos">
+    <div class="row">
+        <ul>
+            <div class="col-lg-3" *ngFor="let producto of productos">
+                <div class="thumbnail">
+                    <div *ngIf="producto.imagen">
+                    <img src="http://localhost/AngularCliBack22.05.17/index.php/uploads{{producto.imagen}}" alt="">
+                    </div>
+                    <div class="caption">
+                        <p><strong>{{producto.nombre}}</strong></p>
+                        <p>{{producto.precio | currency:'EUR':true}}</p>
+                        <p>{{producto.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
 </div>
